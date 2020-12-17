@@ -1,0 +1,61 @@
+.jumbotron{
+    background-color: #EAB543;
+    color: #fff;
+    padding: 70px 0;
+    text-align: center;
+}
+
+
+.brand-icon{
+    font-size: 80px ;
+}
+.bco{
+    background-color: #CAD3C8;
+}
+
+.notfound {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+     }
+ .special
+ {
+    background: #000000;
+ }
+ .cardbg{
+    background-color: hsla(59, 93%, 73%, 0.966);
+    opacity: .8;
+ }
+ .cardhead
+ {
+     padding-top: 0px;
+     width: auto;
+     height: 2rem;
+     text-align: center;
+     text-indent: 1pt;
+     text-decoration-style: solid;
+    text-decoration-color: tomato;
+    background-color:#293070;
+    
+ }
+.bar{
+    width: 50px;
+}
+
+.txt{
+font-family: 'Times New Roman', Times, serif;
+}
+.help
+{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+
+
