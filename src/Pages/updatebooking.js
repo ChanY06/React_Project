@@ -11,14 +11,16 @@ class updatebooking extends Component {
             mobile: null,
             email: null,
             persons:null,
-            date:null,
-            time:null,
+            indate:null,
+            intime:null,
+            outdate:null,
+            outtime:null,
             bid:null
 
         }
     }
 
-   async updateData(id,name,mobile,email,persons,date,time){
+   async updateData(id,name,mobile,email,persons,indate,intime,outdate,outtime){
     const response = await fetch('http://localhost:3001/booking',{
         method: "PUT",
         mode: "cors",
@@ -29,8 +31,10 @@ class updatebooking extends Component {
             mobile:mobile,
             email:email,
             persons:persons  , 
-            date:date,
-            time:time         
+            indate:indate,
+            intime:intime, 
+            outdate:outdate,
+            outtime:outtime         
         })
     })
   
@@ -54,7 +58,7 @@ this.setState({bid:`Data in ${id} ${data}`});
         })
     }
     render() {
-        const {id,name,mobile,email,persons,date,time,bid}=this.state
+        const {id,name,mobile,email,persons,indate,intime,outdate,outtime,bid}=this.state
     return (
         <div className="container">
             <div className="py-4">
@@ -95,22 +99,35 @@ this.setState({bid:`Data in ${id} ${data}`});
     </div>
   </div>
   <div class="form-group row">
-    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Date</label>
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Check IN Date</label>
     <div class="col-sm-10">
       <input type="date" class="form-control form-control-lg" id="colFormLabelLg"
-      placeholder="Pick a Date" name="date"onChange={this.handleInputChange}/>
+      placeholder="Pick a Date" name="indate"onChange={this.handleInputChange}/>
     </div>
   </div>
   <div class="form-group row">
-    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Time</label>
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Check INT ime</label>
     <div class="col-sm-10">
       <input type="time" class="form-control form-control-lg" id="colFormLabelLg"
-      placeholder="Time" name="time"onChange={this.handleInputChange}/>
+      placeholder="Time" name="intime"onChange={this.handleInputChange}/>
     </div>
   </div>
-  
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Check OUT Date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control form-control-lg" id="colFormLabelLg"
+      placeholder="Pick a Date" name="outdate"onChange={this.handleInputChange}/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Check OUT Time</label>
+    <div class="col-sm-10">
+      <input type="time" class="form-control form-control-lg" id="colFormLabelLg"
+      placeholder="Time" name="outtime"onChange={this.handleInputChange}/>
+    </div>
+  </div>
   <br></br>
-  <button onClick={ ()=> this.updateData(id,name,mobile,email,persons,date,time)}
+  <button onClick={ ()=> this.updateData(id,name,mobile,email,persons,indate,intime,outdate,outtime)}
   type="submit" class="btn btn-primary">Submit</button>
 </form>     
 <br></br>       

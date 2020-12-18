@@ -11,14 +11,16 @@ class bookpage extends Component {
             mobile: null,
             email: null,
             persons:null,
-            date:null,
-            time:null,
+            indate:null,
+            intime:null,
+            outdate:null,
+            outtime:null,
             resname:(this.props.match.params.res),
             bid:null
         }
     }
 
-   async postData(name,mobile,email,persons,date,time,resname){
+   async postData(name,mobile,email,persons,indate,intime,outdate,outtime,resname){
     const response = await fetch('http://localhost:3001/booking',{
         method: "POST",
         mode: "cors",
@@ -29,8 +31,10 @@ class bookpage extends Component {
             mobile:mobile,
             email:email,
             persons:persons  ,    
-            date:date,
-            time:time,
+            indate:indate,
+            intime:intime,
+            outdate:outdate,
+            outtime:outtime,
             resname:resname,
         })
     })
@@ -57,7 +61,7 @@ const data= await response.json();
     render() {
       console.log(this.props);
       //const resname=(this.props.match.params.res);
-        const {id,name,mobile,email,persons,date,time,resname,bid}=this.state
+        const {id,name,mobile,email,persons,indate,intime,outdate,outtime,resname,bid}=this.state
     console.log(`render${resname}`);
 
     return (
@@ -95,22 +99,36 @@ const data= await response.json();
     </div>
   </div>
   <div class="form-group row">
-    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Date</label>
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Check IN Date</label>
     <div class="col-sm-10">
       <input type="date" class="form-control form-control-lg" id="colFormLabelLg"
-      placeholder="Pick a Date" name="date"onChange={this.handleInputChange}/>
+      placeholder="Pick a Date" name="indate"onChange={this.handleInputChange}/>
     </div>
   </div>
   <div class="form-group row">
-    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Time</label>
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Check IN Time</label>
     <div class="col-sm-10">
       <input type="time" class="form-control form-control-lg" id="colFormLabelLg"
-      placeholder="Time" name="time"onChange={this.handleInputChange}/>
+      placeholder="Time" name="intime"onChange={this.handleInputChange}/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Check OUT Date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control form-control-lg" id="colFormLabelLg"
+      placeholder="Pick a Date" name="outdate"onChange={this.handleInputChange}/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Check OUT Time</label>
+    <div class="col-sm-10">
+      <input type="time" class="form-control form-control-lg" id="colFormLabelLg"
+      placeholder="Time" name="outtime"onChange={this.handleInputChange}/>
     </div>
   </div>
   
   <br></br>
-  <button onClick={ ()=> this.postData(name,mobile,email,persons,date,time,resname)}
+  <button onClick={ ()=> this.postData(name,mobile,email,persons,indate,intime,outdate,outtime,resname)}
   type="submit" class="btn btn-primary">Submit</button>
 </form>     
 </strong>

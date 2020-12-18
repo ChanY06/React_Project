@@ -70,8 +70,10 @@ render(){
                       <br></br> <h5 >Mobile:{b.mobile}</h5>
                       <br></br> <h5 >Email ID:{b.email}</h5>
                       <br></br> <h5 >No of Persons:{b.persons}</h5>
-                      <br></br> <h5 >Date:{b.date}</h5>
-                      <br></br> <h5 >Time:{b.time}</h5>
+                      <br></br> <h5 >Check IN Date:{b.indate}</h5>
+                      <br></br> <h5 >Check IN Time:{b.intime}</h5>
+                      <br></br> <h5 >Check OUT Date:{b.outdate}</h5>
+                      <br></br> <h5 >Check OUT Time:{b.outtime}</h5>
                       </p>
                     </div>
 

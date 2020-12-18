@@ -21,10 +21,10 @@ const {restaurent}  =props;
                       <h1 class="card-title text-light">{rest.name}</h1>
                       <p class="card-text txt text-danger">
                       <h5 >Locality</h5> <h5 className="text-info">{rest.area}</h5><br/>
-                      <h5>Food Types Available</h5> <h5 className="text-info">{rest.foodtype}</h5><br/>
-                      <h5>Average Cost For Two People</h5> <h5 className="text-info">{rest.cost}</h5><br/>
+                      <h5>Eminities Available</h5> <h5 className="text-info">{rest.foodtype}</h5><br/>
+                      <h5>Price</h5> <h5 className="text-info">{rest.cost}/-</h5><br/>
                       <h5>Payment Currency</h5> <h5 className="text-info">{rest.currency}</h5><br/>
-                      <h5>Restaurent Rating</h5> <h5 className="text-info">{rest.rating}</h5><br/>
+                      <h5>Hotel Rating</h5> <h5 className="text-info">{rest.rating}</h5><br/>
                       <h5>Customers Feedback</h5> <h5 className="text-info">{rest.feed}</h5><br/>
                       <h5>No of Customers voted</h5> <h5 className="text-info">{rest.votes}</h5>
                       </p>

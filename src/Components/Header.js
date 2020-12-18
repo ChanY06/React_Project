@@ -6,10 +6,10 @@ const Header = props => {
     return ( 
     <div className="jumbotron text-dark">
   <h1 className="display-2 ">
-  <span class="material-icons brand-icon">restaurant</span>
-Restaurant Booking
+  <span class="material-icons brand-icon">hotel</span>
+Find u...r Best Stay
 <span class="material-icons brand-icon">
-fastfood
+king_bed
 </span>
 </h1>
 <br></br>
